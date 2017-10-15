@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 class ConversionViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
+    
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet {
             updateCelsiusLabel()
