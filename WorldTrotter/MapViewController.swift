@@ -22,7 +22,11 @@ class MapViewController: UIViewController {
     override func loadView() {
         mkView = MKMapView()
         view = mkView
-        let segmentControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        
+        let standardString = NSLocalizedString("Standard", comment: "Standard Map")
+        let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid Map")
+        let satelliteString = NSLocalizedString("Satellite", comment: "Satellite Map")
+        let segmentControl = UISegmentedControl(items: [standardString, hybridString, satelliteString])
         segmentControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentControl.translatesAutoresizingMaskIntoConstraints = false
         segmentControl.selectedSegmentIndex = 0
