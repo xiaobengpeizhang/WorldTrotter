@@ -8,15 +8,15 @@
 
 import Foundation
 import UIKit
-
+// 温度转换控制器
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var celsiusLabel: UILabel!
-    @IBOutlet var textField: UITextField!
+    @IBOutlet var celsiusLabel: UILabel!    // 摄氏温度栏
+    @IBOutlet var textField: UITextField!   // 输入华氏温度的文本框
     
-    var fahrenheitValue: Measurement<UnitTemperature>? {
+    var fahrenheitValue: Measurement<UnitTemperature>? {    // 华氏温度值
         didSet {
-            updateCelsiusLabel()
+            updateCelsiusLabel()    // 每次华氏温度改变时更新摄氏温度栏
         }
     }
     
@@ -37,8 +37,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }()
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
-        if let text = textField.text,  let value = Double(text) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        if let text = textField.text, let number = numberFormatter.number(from: text) {
+            fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else {
             fahrenheitValue = nil
         }
@@ -63,9 +63,10 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let existDecimal = textField.text?.range(of: ".")
-        let replaceDecimal = string.range(of: ".")
-        if existDecimal != nil, replaceDecimal != nil {
+        let localSeperator = Locale.current.decimalSeparator ?? "."
+        let existSeperatorRange = textField.text?.range(of: localSeperator)
+        let replaceSeperatorRange = string.range(of: localSeperator)
+        if existSeperatorRange != nil, replaceSeperatorRange != nil {
             return false
         } else {
             return true
