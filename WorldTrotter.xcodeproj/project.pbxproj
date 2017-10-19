@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D6E08961F908DC100A1AEF0 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E08951F908DC100A1AEF0 /* ConversionViewController.swift */; };
+		2D03E9CC1F95D3F900B8278A /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03E9CB1F95D3F900B8278A /* ConversionViewController.swift */; };
+		2D2EC1351F95FB72002A74BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D2EC12E1F95FA42002A74BE /* Localizable.strings */; };
 		2D93D8471F9262910033211D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D93D8461F9262910033211D /* MapKit.framework */; };
 		2D93D8491F926F280033211D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D8481F926F280033211D /* MapViewController.swift */; };
 		2DDCFD701F905CC30033D72B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCFD6F1F905CC30033D72B /* AppDelegate.swift */; };
@@ -36,9 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D03E9CB1F95D3F900B8278A /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		2D2410701F9598A1009FE5E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2D2410711F959CFF009FE5E1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		2D6E08951F908DC100A1AEF0 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		2D2EC12F1F95FA48002A74BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D2EC1331F95FB6E002A74BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D2EC1341F95FB70002A74BE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D4D18591F96004A001D6016 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		2D4D185A1F96004A001D6016 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2D93D8461F9262910033211D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2D93D8481F926F280033211D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2DDCFD6C1F905CC30033D72B /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,9 +119,10 @@
 		2DDCFD6E1F905CC30033D72B /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				2D2EC12E1F95FA42002A74BE /* Localizable.strings */,
 				2DDCFD6F1F905CC30033D72B /* AppDelegate.swift */,
-				2D6E08951F908DC100A1AEF0 /* ConversionViewController.swift */,
 				2D93D8481F926F280033211D /* MapViewController.swift */,
+				2D03E9CB1F95D3F900B8278A /* ConversionViewController.swift */,
 				2DDCFD731F905CC30033D72B /* Main.storyboard */,
 				2DDCFD761F905CC30033D72B /* Assets.xcassets */,
 				2DDCFD781F905CC30033D72B /* LaunchScreen.storyboard */,
@@ -231,6 +238,9 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				"zh-Hans",
+				fr,
 			);
 			mainGroup = 2DDCFD631F905CC30033D72B;
 			productRefGroup = 2DDCFD6D1F905CC30033D72B /* Products */;
@@ -250,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DDCFD7A1F905CC30033D72B /* LaunchScreen.storyboard in Resources */,
+				2D2EC1351F95FB72002A74BE /* Localizable.strings in Resources */,
 				2DDCFD771F905CC30033D72B /* Assets.xcassets in Resources */,
 				2DDCFD751F905CC30033D72B /* Main.storyboard in Resources */,
 			);
@@ -276,8 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6E08961F908DC100A1AEF0 /* ConversionViewController.swift in Sources */,
 				2D93D8491F926F280033211D /* MapViewController.swift in Sources */,
+				2D03E9CC1F95D3F900B8278A /* ConversionViewController.swift in Sources */,
 				2DDCFD701F905CC30033D72B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,12 +325,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2D2EC12E1F95FA42002A74BE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D2EC12F1F95FA48002A74BE /* Base */,
+				2D2EC1331F95FB6E002A74BE /* en */,
+				2D2EC1341F95FB70002A74BE /* es */,
+				2D4D185A1F96004A001D6016 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2DDCFD731F905CC30033D72B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2DDCFD741F905CC30033D72B /* Base */,
 				2D2410701F9598A1009FE5E1 /* en */,
 				2D2410711F959CFF009FE5E1 /* es */,
+				2D4D18591F96004A001D6016 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
